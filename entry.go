@@ -98,7 +98,7 @@ func apiWrapper(handler interface{}, middleware ...MiddlewareFunc) interface{} {
 					}
 					if resData.Kind() == reflect.String {
 						// 如果是字符串则不转换
-						res.Headers["Content-Type"] = "text/plain;charset=utf-8"
+						res.Headers["Content-Type"] = "application/x-javascript;charset=utf-8"
 						res.Body = resData.String()
 					} else {
 						// 如果是struct则转为json
